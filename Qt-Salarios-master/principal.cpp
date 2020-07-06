@@ -1,3 +1,10 @@
+/**
+ * poo
+ * Autor: David Vargas <dvargasd@ups.edu.ec>
+ * Fecha: 06-07-2020
+ * salarios
+ *
+ */
 #include "principal.h"
 #include "ui_principal.h"
 #include "QMessageBox"
