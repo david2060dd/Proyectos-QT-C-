@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>recursos/printer.png</file>
+        <file>recursos/problem.png</file>
+        <file>recursos/save.png</file>
+    </qresource>
+</RCC>
