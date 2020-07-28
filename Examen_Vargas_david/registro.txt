@@ -1,0 +1,5 @@
+" nombre" ;" Fecha-Hora limite" ;" Prioridad" ;" tipo" 
+" Prueba De Poo" ;" lu. jul. 27 2020" ;" Prioridad alta" ;" Estudiantil" 
+" pasear al perro " ;" lu. jul. 27 2020" ;" Prioridad media" ;" Hogar" 
+" cocinar" ;" lu. jul. 27 2020" ;" Prioridad alta" ;" culinario" 
+" ser feliz" ;" lu. jul. 27 2020" ;" Prioridad baja" ;" entretenimiento personal" 
