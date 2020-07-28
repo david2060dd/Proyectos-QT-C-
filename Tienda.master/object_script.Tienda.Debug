@@ -1,0 +1,10 @@
+debug/aggproducts.o
+debug/fact.o
+debug/main.o
+debug/principal.o
+debug/producto.o
+debug/qrc_recursos.o
+debug/moc_aggproducts.o
+debug/moc_fact.o
+debug/moc_principal.o
+debug/moc_producto.o

@@ -1,0 +1,10 @@
+release/aggproducts.o
+release/fact.o
+release/main.o
+release/principal.o
+release/producto.o
+release/qrc_recursos.o
+release/moc_aggproducts.o
+release/moc_fact.o
+release/moc_principal.o
+release/moc_producto.o
