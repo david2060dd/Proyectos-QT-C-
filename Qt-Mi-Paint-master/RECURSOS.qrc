@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Recursos/circle-vol-1circle.png</file>
+        <file>Recursos/help.png</file>
+        <file>Recursos/logout.png</file>
+        <file>Recursos/minus.png</file>
+        <file>Recursos/paint.png</file>
+        <file>Recursos/plus.png</file>
+        <file>Recursos/rectangle.png</file>
+        <file>Recursos/save.png</file>
+        <file>Recursos/spectrum.png</file>
+        <file>Recursos/text.png</file>
+    </qresource>
+</RCC>
