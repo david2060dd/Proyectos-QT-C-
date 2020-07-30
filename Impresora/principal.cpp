@@ -95,22 +95,7 @@ void Principal::mostrarImpresoras()
  connect(ui->inMarca, SIGNAL(currentIndexChanged(int)), this, SLOT(precioImpre(int)));
  precioImpre(0);
 }
-//Querido inge Rodrigo... no se puede usar el "toPlainText" para QTableWitgets por lo que no se puede guaradar pero igual programe para guardar aqui esta comentado uwu
 
-//void Principal::guardar()
-//{
-   // QString fileName = QFileDialog::getSaveFileName(this,
-   //                    "Guardar datos", QDir::home().absolutePath(), "Archivo de texto (*.xlsx)");
-    //QFile data(fileName);
-
-   // if (data.open(QFile::WriteOnly | QFile::Truncate)) {
-      //  QTextStream salida(&data);
-      //  salida << ui->outDetalle->toPlainText()
-      //  ui->statusbar->showMessage("Datos almacenados en " + fileName,5000);
-   // }
-
-    //data.close();
-//}
 
 
 
@@ -122,4 +107,34 @@ void Principal::on_actionAcerca_de_triggered()
 {
     QMessageBox::information(this,"acerca de","RegPrint\n Autor: David Vargas\n Creado el jue.,7 de jul del 2020 \n QT 4.12.2 \n Copyright 2008-2020 Compufuture.inc All rights reserve");
 
+}
+
+void Principal::on_actionGuardar_triggered()
+{
+    QString fileName = QFileDialog::getSaveFileName(this,
+                                                    "Guardar datos", QDir::home().absolutePath() , "Archivo de Texto (*.txt)");
+    QFile data(fileName);
+    if (data.open(QFile::WriteOnly | QFile::Truncate))
+    {
+        QTextStream salida(&data);
+        QStringList Lista;
+        for( int columna = 0; columna < ui->outDetalle->columnCount(); ++columna ){
+            Lista << "\" " + ui->outDetalle->horizontalHeaderItem(columna)->data(Qt::DisplayRole).toString() + "\" ";
+        }
+        salida << Lista.join(";") << "\n";
+        for( int fila = 0; fila < ui->outDetalle->rowCount(); ++fila)
+        {
+            Lista.clear();
+            for( int columna = 0; columna < ui->outDetalle->columnCount(); ++columna){
+                QTableWidgetItem* item = ui->outDetalle->item(fila,columna);
+                if (!item || item->text().isEmpty()){
+                    ui->outDetalle->setItem(fila,columna,new QTableWidgetItem("0"));
+                }
+                Lista << "\" "+ui->outDetalle->item( fila, columna )->text()+"\" ";
+            }
+            salida<< Lista.join( ";" )+"\n";
+        }
+        ui->statusbar->showMessage("Datos almacenados en: " + fileName, 5000);
+        data.close();
+    }
 }

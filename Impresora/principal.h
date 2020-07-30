@@ -25,6 +25,8 @@ public slots:
 private slots:
     void on_actionAcerca_de_triggered();
 
+    void on_actionGuardar_triggered();
+
 private:
     Ui::Principal *ui;
     QList<Impresora*> m_impresoras;
