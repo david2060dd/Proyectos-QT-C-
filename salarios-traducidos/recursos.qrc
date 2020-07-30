@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>recursos/calculator.png</file>
+        <file>recursos/close.png</file>
+        <file>recursos/diskette.png</file>
+        <file>recursos/icono.png</file>
+        <file>recursos/new-file.png</file>
+        <file>recursos/Open-icon.png</file>
+        <file>salarios-traducidos_en_US.qm</file>
+        <file>salarios-traducidos_ru_RU.qm</file>
+    </qresource>
+</RCC>
